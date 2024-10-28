@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <title>Registration Page</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FF7E33;
+      color: #555;
+    }
+
+    header {
+      background-color: #394240;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    .flex-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #555;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .left-navigation {
+      float: left;
+      width: 20%;
+      padding: 10px;
+      background-color: #555;
+      color: #ffefef;
+      height: 265vh;
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .content {
+      float: left;
+      width: 80%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .registration-container {
+      align-items: center;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      width: 360px;
+      text-align: center;
+      animation: slide-up 0.6s ease-out;
+    }
+
+    @keyframes slide-up {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-control {
+      margin-bottom: 10px;
+      border-radius: 6px;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    .genre {
+      margin-bottom: 20px;
+    }
+
+    .genre-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .book-card {
+      width: calc(20% - 30px);
+      margin: 15px;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      text-align: center;
+      display: inline-block;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    header {
+      background-color: #263238;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    .book-card:hover {
+      transform: scale(1.05);
+    }
+
+    .book-card img {
+      max-width: 100%;
+      border-radius: 4px;
+    }
+
+    .book-details {
+      margin-top: 10px;
+      color: #333;
+    }
+
+    footer {
+      background-color: #394240;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">DHANU Catalogue</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="catalogue.html">Catalogue</a>
+      <a href="#">Register</a>
+      <a href="login_page.html">Login</a>
+    </nav>
+  </header>
+
+  <div class="flex-container">
+    <div class="registration-container">
+      <h2>Register</h2>
+      <form action="#" method="post">
+        <div class="form-group">
+          
+          <label for="username"><i class="bi bi-person-circle"></i>   Username</label>
+          <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
+        </div>
+        <div class="form-group">
+          <label for="email"><i class="bi bi-envelope-at-fill"></i>   Email</label>
+          <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+            <label class="form-check-label" for="male">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
+            <label class="form-check-label" for="female">Female</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phone"><i class="bi bi-telephone-fill"></i>   Phone Number</label>
+          <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone Number" required>
+        </div>
+        <div class="form-group">
+          <label for="file"><i class="bi bi-file-image"></i>   Profile Picture</label>
+          <input type="file" class="form-control" name="file" id="file" placeholder="file" required>
+        </div>
+        <div class="form-group">
+          <label for="address"><i class="bi bi-geo-alt-fill"></i>   Address</label>
+          <textarea class="form-control" name="address" id="address" placeholder="Address" rows="3" required></textarea>
+        </div>
+        <div class="form-group genre">
+          <label class="genre-title">Choose your interest in genres:</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="genre[]" id="fiction" value="Fiction">
+            <label class="form-check-label" for="fiction">Fiction</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="genre[]" id="mystery" value="Mystery">
+            <label class="form-check-label" for="mystery">Mystery</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="genre[]" id="romance" value="Romance">
+            <label class="form-check-label" for="romance">Romance</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="genre[]" id="scifi" value="Science Fiction">
+            <label class="form-check-label" for="scifi">Science Fiction</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="genre[]" id="fantasy" value="Fantasy">
+            <label class="form-check-label" for="fantasy">Fantasy</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="genre[]" id="biography" value="Biography">
+            <label class="form-check-label" for="biography">Biography</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="genre[]" id="history" value="History">
+            <label class="form-check-label" for="history">History</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success btn-block">Sign up</button>
+      </form>
+
+      <div class="forgot-password">
+        <a href="#">Already have an account? Sign in</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Bookworm's Catalogue</p>
+  </footer>
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
